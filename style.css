@@ -329,7 +329,7 @@ body {
   padding: 0.5rem 1rem;
 }
 
-.album-icons{
+.album-icons {
   margin-left: 1rem;
 }
 .album-icon-style {
@@ -348,7 +348,7 @@ body {
   cursor: pointer;
 }
 
-.song-name:hover{
+.song-name:hover {
   text-decoration: underline;
 }
 .artist {
@@ -357,8 +357,7 @@ body {
   margin-top: -1rem;
   cursor: pointer;
 }
-
-.artist:hover{
+.artist:hover {
   opacity: 1;
   text-decoration: underline;
 }
@@ -366,9 +365,8 @@ body {
   height: 3.5rem;
   width: 3.5rem;
   cursor: pointer;
-  
 }
-.album-picture-style:hover{
+.album-picture-style:hover {
   text-decoration: underline;
 }
 .music {

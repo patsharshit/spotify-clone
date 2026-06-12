@@ -25,10 +25,11 @@ body {
   background-color: #121212;
   border-radius: 1rem;
   overflow: auto;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 .music-player {
-  background-color: green;
+  background-color: black;
   position: fixed;
   flex: row-reverse;
   bottom: 0;
@@ -68,7 +69,7 @@ body {
   background-color: #121212;
   border-radius: 1rem;
   height: 100%;
-  width:fit-content;
+  width: fit-content;
   /* margin: 0.5rem; */
   padding: 0.5rem 0.75rem;
 }
@@ -134,6 +135,11 @@ body {
   margin-top: 0.5rem;
   height: 2rem;
 }
+
+.dark-badge {
+  background-color: black;
+  color: white;
+}
 .Badge:hover {
   background-color: #1ed760;
   transform: scale(1.04);
@@ -144,15 +150,227 @@ body {
   transform: scale(0.98);
 }
 .sticky-nav {
-
   display: flex;
   justify-content: space-between;
   background-color: #121212;
-  position:sticky;
+  position: sticky;
   top: 0;
   align-items: center;
-  
-  
-  
+  padding: 1rem 0 1rem 0;
+  z-index: 12;
+}
+.sticky-nav-icons img {
+  height: 1.5rem;
+  width: 1.5rem;
+  /* padding-right: 2rem; */
+  gap: 1rem;
+  border-radius: 4px;
+  opacity: 0.5;
+  align-items: center;
+  transition:
+    border-radius 0.3s ease,
+    opacity 0.3s ease;
 }
 
+.sticky-nav-icons img:hover {
+  opacity: 1;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-nav-options button {
+  margin-right: 1.5rem;
+}
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+.card {
+  background-color: #232323;
+  width: 150px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.card-container {
+  display: flex;
+  border-radius: 0.5rem;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+.card-image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+}
+.card-info {
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+.card:hover {
+  background-color: #2e2e2e;
+  transform: scale(1.05);
+}
+.footer {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  border-top: 1px solid white;
+  opacity: 0.7;
+  height: 50%;
+  width: 90%;
+}
+.music-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.album {
+  width: 25%;
+}
+.player {
+  width: 50%;
+}
+.controls {
+  width: 25%;
+}
+
+.player-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-icon {
+  height: 1rem;
+  margin-left: 1.5rem;
+  opacity: 0.7;
+}
+.player-icon:hover {
+  opacity: 1;
+}
+.playback-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-bar {
+  width: 70%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.playback-range::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.18rem;
+}
+.playback-range::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #1ed760;
+  margin-top: -6px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: auto;
+}
+.control-icon-style {
+  height: 2rem;
+  width: 2rem;
+  opacity: 0.6;
+  padding: 0.25rem;
+}
+
+.control-icon-style:hover {
+  opacity: 1;
+}
+
+.control-range {
+  width: 25%;
+}
+.control-range::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.18rem;
+}
+.control-range::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #1ed760;
+  margin-top: -6px;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.album-icons{
+  margin-left: 1rem;
+}
+.album-icon-style {
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0.7;
+  margin: 0.25rem;
+}
+.album-icon-style:hover {
+  opacity: 1;
+  transform: scale(1.025);
+}
+.song-name {
+  font-weight: 500;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+
+.song-name:hover{
+  text-decoration: underline;
+}
+.artist {
+  opacity: 0.7;
+  font-size: 0.75rem;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.artist:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.album-picture-style {
+  height: 3.5rem;
+  width: 3.5rem;
+  cursor: pointer;
+  
+}
+.album-picture-style:hover{
+  text-decoration: underline;
+}
+.music {
+  margin-left: 0.75rem;
+}
